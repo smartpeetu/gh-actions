@@ -5,6 +5,9 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./testing-actions/react-app
     steps:
       - name: Checout code
         uses: actions/checkout@v4
@@ -14,7 +17,10 @@ jobs:
           node-version: '20.x'
       - name: Install dependencies
         run: npm ci
-        working-directory: ./testing-actions/react-app
+        #working-directory: ./testing-actions/react-app
+      - name: Run unit tests
+        run: npm run test
+        #working-directory: ./testing-actions/react-app
 
     # 0. Checkout code from repo
     # 1. Install deps for our react app
