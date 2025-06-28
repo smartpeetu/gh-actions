@@ -22,8 +22,8 @@ jobs:
       - name: Run unit tests
         run: npm run test
         #working-directory: ./testing-actions/react-app
-      - name: Run application
-        run: npm run start
+      #- name: Run application
+      #  run: npm run start
 
     # 0. Checkout code from repo
     # 1. Install deps for our react app
