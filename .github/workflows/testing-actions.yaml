@@ -12,9 +12,9 @@ jobs:
       run:
         working-directory: ./testing-actions/react-app
     steps:
-      - name: Checout code
+      - name: Checout code kar lo
         uses: actions/checkout@v4
-      - name: Setup node
+      - name: Setup node kar lo
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
