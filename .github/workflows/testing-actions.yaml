@@ -12,13 +12,13 @@ jobs:
       run:
         working-directory: ./testing-actions/react-app
     steps:
-      - name: Checout code kar lo
+      - name: Checkout code kar lo branch1
         uses: actions/checkout@v4
       - name: Setup node kar lo
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
-      - name: Install dependencies
+      - name: Install dependencies branch1
         run: npm ci
         #working-directory: ./testing-actions/react-app
       - name: Run unit tests
