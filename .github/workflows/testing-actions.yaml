@@ -3,7 +3,7 @@ name: Using Actions
 on:
   push:
     branches:
-      - main
+      - branch1
 
 jobs:
   build:
