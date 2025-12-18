@@ -1,30 +1,28 @@
 name: Using Actions
 
 on:
-  pull_request:
+  push:
     branches:
-      - main
-
+      - branch1
+  
 jobs:
   build:
-    runs-on: EC2
+    runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./testing-actions/react-app
+        working-directory: ./testing-actions/my-app
     steps:
-      - name: Checout code kar lo
+      - name: Checkout code kar lo branch1
         uses: actions/checkout@v4
       - name: Setup node kar lo
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
-      - name: Install dependencies
-        run: npm ci
-        #working-directory: ./testing-actions/react-app
+      - name: Install dependencies branch1
+        run: npm install
       - name: Run unit tests
         run: npm run test
-        #working-directory: ./testing-actions/react-app
-      #- name: Run application
+      # - name: Run application
       #  run: npm run start
 
     # 0. Checkout code from repo
