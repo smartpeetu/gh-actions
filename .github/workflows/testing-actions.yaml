@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: '20.x'
       - name: Install dependencies branch1
-        run: npm ci
+        run: npm install
       - name: Run unit tests
         run: npm run test
       # - name: Run application
