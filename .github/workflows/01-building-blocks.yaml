@@ -6,13 +6,13 @@ jobs:
     echo-hello:
         runs-on: ubuntu-latest
         steps:
-            - name: Say Hello
-              run: echo "Hello, Radhe!" 
+            - name: Say Radhe
+              run: echo "Radhe, Radhe!" 
     echo-goodbye:
         runs-on: ubuntu-latest
         steps:
-            - name: Success Step # This step will fail
+            - name: Failed Step # This step will fail
               run: 
-                exit 0
+                exit 1
             - name: Say Goodbye
               run: echo "Goodbye, Nainy!"
