@@ -8,25 +8,21 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # defaults:
-    #   run:
-    #     working-directory: ./testing-actions/my-app
+    defaults:
+      run:
+        working-directory: ./testing-actions/my-app
     steps:
       - name: Checkout code kar lo branch1
         uses: actions/checkout@v4
-      - name: Printing folders branch1
-        run: ls -la
-      # - name: Setup node kar lo
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: '20.x'
-      # - name: Install dependencies branch1
-      #   run: npm ci
-      #   #working-directory: ./testing-actions/react-app
-      # - name: Run unit tests
-      #   run: npm run test
-        #working-directory: ./testing-actions/react-app
-      #- name: Run application
+      - name: Setup node kar lo
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+      - name: Install dependencies branch1
+        run: npm ci
+      - name: Run unit tests
+        run: npm run test
+      # - name: Run application
       #  run: npm run start
 
     # 0. Checkout code from repo
